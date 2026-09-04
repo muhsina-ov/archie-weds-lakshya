@@ -1,5 +1,5 @@
 {
-  "name": "surya-jayesh",
+  "name": "archie-weds-lakshya",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
+    "deploy": "wrangler pages deploy ./dist",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
