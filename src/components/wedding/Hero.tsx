@@ -1,0 +1,137 @@
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+const heroArch = "https://media.invitestory.in/sage-parchment/src/assets/hero-arch.jpg";
+import mahavirayaNamah from "@/assets/mahaviraya-namah.jpg";
+import { invitation } from "@/config/invitation";
+import { AuroraBackdrop } from "./AuroraBackdrop";
+import { useOpened } from "./OpenGate";
+
+export function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  const fade = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+  const { couple, invite, event, familyElders } = invitation;
+  const opened = useOpened();
+
+  return (
+    <section
+      ref={ref}
+      className="relative flex min-h-[100svh] flex-col items-center justify-between overflow-hidden bg-parchment"
+    >
+      <AuroraBackdrop />
+
+      <motion.div style={{ y: imgY }} className="absolute -top-10 inset-x-0 bottom-0">
+        <img
+          src={heroArch}
+          alt="Illustrated Mughal arch with an Indian bride and groom surrounded by lotus flowers"
+          width={1024}
+          height={1536}
+          className="h-full w-full object-cover object-top opacity-70"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-pine/30 via-parchment/40 to-parchment" />
+      </motion.div>
+
+      {/* Fixed bottom gradient to guarantee seamless transition to next section */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-72 bg-gradient-to-t from-parchment via-parchment/95 via-60% to-transparent" />
+
+      <motion.div
+        style={{ y: textY }}
+        className="relative z-20 mt-auto w-full px-6 pt-16 pb-8 text-center"
+      >
+        {/* Sacred Invocation Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={opened ? { opacity: 1, y: 0 } : false}
+          transition={{ duration: 1, delay: 0.1 }}
+          className="mx-auto mb-4 max-w-sm px-4"
+        >
+          <img
+            src={mahavirayaNamah}
+            alt="Shree Mahaviraya Namah"
+            className="h-10 sm:h-14 w-auto mix-blend-multiply opacity-95 mx-auto object-contain"
+          />
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={opened ? { opacity: 1, y: 0 } : false}
+          transition={{ duration: 1, delay: 0.25 }}
+          className="text-[0.7rem] tracking-[0.42em] text-ink/75 uppercase"
+        >
+          {invite.kicker}
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 24, letterSpacing: "0.4em" }}
+          animate={opened ? { opacity: 1, y: 0, letterSpacing: "0.16em" } : false}
+          transition={{ duration: 1.4, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          className="mx-auto mt-4 max-w-md text-4xl leading-tight font-light text-pine uppercase sm:text-5xl"
+        >
+          {couple.brideShort}
+          <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">
+            weds
+          </span>
+          {couple.groomShort}
+        </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, scaleX: 0.4 }}
+          animate={opened ? { opacity: 1, scaleX: 1 } : false}
+          transition={{ duration: 1.2, delay: 0.7 }}
+          className="mx-auto mt-5 w-52 gold-rule"
+        />
+
+        {/* Family Details */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={opened ? { opacity: 1 } : false}
+          transition={{ duration: 1, delay: 0.9 }}
+          className="mt-5 space-y-1.5 text-xs text-ink/80 font-sans"
+        >
+          <p className="font-medium text-pine">{couple.bride} <span className="font-normal text-ink/70">({couple.brideParents})</span></p>
+          <p className="font-medium text-pine">{couple.groom} <span className="font-normal text-ink/70">({couple.groomParents})</span></p>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={opened ? { opacity: 1 } : false}
+          transition={{ duration: 1, delay: 1.05 }}
+          className="mt-4 text-xs italic text-ink/70"
+        >
+          {invite.line}
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={opened ? { opacity: 1 } : false}
+          transition={{ duration: 1, delay: 1.15 }}
+          className="mt-3 font-display text-2xl tracking-[0.18em] text-gold sm:text-3xl"
+        >
+          {event.dateLabel}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={opened ? { opacity: 1 } : false}
+          transition={{ duration: 1, delay: 1.25 }}
+          className="mt-4 rounded-xl border border-gold/30 bg-parchment-deep/40 px-4 py-2 text-center"
+        >
+          <p className="text-[0.62rem] tracking-[0.2em] text-gold uppercase">{familyElders.title}</p>
+          <p className="text-xs font-medium text-pine mt-0.5">{familyElders.names}</p>
+        </motion.div>
+      </motion.div>
+
+      <motion.div style={{ opacity: fade }} className="relative z-20 pb-6 text-center">
+        <span className="text-[0.6rem] tracking-[0.3em] text-ink/60 uppercase">scroll</span>
+        <motion.div
+          animate={{ scaleY: [0.2, 1, 0.2], originY: 0 }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          className="mx-auto mt-2 h-8 w-px bg-gold"
+        />
+      </motion.div>
+    </section>
+  );
+}
