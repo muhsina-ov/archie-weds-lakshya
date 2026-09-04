@@ -145,11 +145,11 @@ export const invitation = {
     contacts: [],
   },
   meta: {
-    title: "Archie & Lakshya — Wedding Celebrations | 14–15 November 2026",
+    title: "Archie & Lakshya — Wedding Celebrations",
     description:
-      "Together with their families, Archie Jain & Lakshya Jain cordially invite you to celebrate their wedding on 14–15 November 2026. Dev Darshan, Haldi, Sangeet, Baarat, Varmala & Reception.",
-    url: "https://archie-weds-lakshya.pages.dev",
-    image: "https://archie-weds-lakshya.pages.dev/og-image.jpg",
+      "Archie Jain & Lakshya Jain cordially invite you to celebrate their wedding on 14–15 November 2026.",
+    url: "https://archie-weds-lakshya.invitingyou.top/",
+    image: "https://archie-weds-lakshya.invitingyou.top/og-image.jpg",
     siteName: "Archie & Lakshya Wedding",
   },
 } as const;
