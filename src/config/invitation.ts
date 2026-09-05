@@ -142,8 +142,8 @@ export const invitation = {
     title: "Lakshya & Archie — Wedding Celebrations",
     description:
       "Lakshya Jain & Archie Jain cordially invite you to celebrate their wedding on 14–15 November 2026.",
-    url: "https://archie-weds-lakshya.invitingyou.top/",
-    image: "https://archie-weds-lakshya.invitingyou.top/og-image.jpg",
+    url: "https://lakshya-weds-archie.invitingyou.top/",
+    image: "https://lakshya-weds-archie.invitingyou.top/og-image.jpg",
     siteName: "Lakshya & Archie Wedding",
   },
 } as const;
