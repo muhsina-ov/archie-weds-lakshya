@@ -123,7 +123,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
             transition={{ duration: 1.4, delay: 0.5 }}
             className="relative font-display text-3xl tracking-[0.08em] text-parchment"
           >
-            A <span className="mx-1 text-gold">&amp;</span> L
+            L <span className="mx-1 text-gold">&amp;</span> A
           </motion.span>
         </div>
 
@@ -133,7 +133,7 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
           transition={{ duration: 1.5, delay: 0.6, ease: EASE }}
           className="mt-9 text-lg font-light text-parchment uppercase sm:text-xl"
         >
-          {couple.brideShort} &amp; {couple.groomShort}
+          {couple.groomShort} &amp; {couple.brideShort}
         </motion.h2>
 
         <motion.div

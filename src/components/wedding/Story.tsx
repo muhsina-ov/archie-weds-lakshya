@@ -23,7 +23,7 @@ export function Story() {
 
         <div className="space-y-14">
           {invitation.story.map((item, i) => (
-            <Reveal key={item.year} delay={i * 0.08}>
+            <Reveal key={item.title} delay={i * 0.08}>
               <article className="relative pl-16 sm:pl-0">
                 <span className="absolute top-6 left-6 z-10 block size-2 -translate-x-1/2 rotate-45 bg-gold sm:left-1/2" />
                 <div
@@ -50,10 +50,7 @@ export function Story() {
                     </div>
                   </div>
                   <div className={`mt-4 sm:mt-0 sm:w-1/2 ${i % 2 ? "sm:text-right" : ""}`}>
-                    <p className="text-[0.6rem] tracking-[0.35em] text-gold uppercase">
-                      {item.year}
-                    </p>
-                    <h3 className="mt-2 font-display text-2xl text-pine">{item.title}</h3>
+                    <h3 className="font-display text-2xl text-pine">{item.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-ink/75">{item.text}</p>
                   </div>
                 </div>

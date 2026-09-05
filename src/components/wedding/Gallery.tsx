@@ -4,12 +4,14 @@ import { X } from "lucide-react";
 import couple1 from "@/assets/couple-1.jpg";
 import couple2 from "@/assets/couple-2.jpg";
 import couple3 from "@/assets/couple-3.jpg";
+import couple4 from "@/assets/couple-4.jpg";
 import { Reveal } from "./Reveal";
 
 const PHOTOS = [
-  { src: couple1, alt: "Archie & Lakshya by the stepwell", position: "object-[center_60%]" },
-  { src: couple2, alt: "Archie & Lakshya holding hands under the tree", position: "object-[center_65%]" },
-  { src: couple3, alt: "Archie & Lakshya on the ancient stone stairs", position: "object-[center_55%]" },
+  { src: couple1, alt: "Lakshya & Archie by the stepwell", position: "object-[center_60%]" },
+  { src: couple2, alt: "Lakshya & Archie holding hands under the tree", position: "object-[center_65%]" },
+  { src: couple3, alt: "Lakshya & Archie on the ancient stone stairs", position: "object-[center_55%]" },
+  { src: couple4, alt: "Lakshya & Archie stylish close-up portrait", position: "object-[center_40%]" },
 ];
 
 export function Gallery() {

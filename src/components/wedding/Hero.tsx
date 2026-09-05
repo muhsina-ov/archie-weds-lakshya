@@ -70,11 +70,11 @@ export function Hero() {
           transition={{ duration: 1.4, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto mt-4 max-w-md text-4xl leading-tight font-light text-pine uppercase sm:text-5xl"
         >
-          {couple.brideShort}
+          {couple.groomShort}
           <span className="mx-3 inline-block font-display text-2xl lowercase italic text-pine/70">
             weds
           </span>
-          {couple.groomShort}
+          {couple.brideShort}
         </motion.h1>
 
         <motion.div
@@ -91,8 +91,8 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.9 }}
           className="mt-5 space-y-1.5 text-xs text-ink/80 font-sans"
         >
-          <p className="font-medium text-pine">{couple.bride} <span className="font-normal text-ink/70">({couple.brideParents})</span></p>
           <p className="font-medium text-pine">{couple.groom} <span className="font-normal text-ink/70">({couple.groomParents})</span></p>
+          <p className="font-medium text-pine">{couple.bride} <span className="font-normal text-ink/70">({couple.brideParents})</span></p>
         </motion.div>
 
         <motion.p
@@ -117,10 +117,11 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={opened ? { opacity: 1 } : false}
           transition={{ duration: 1, delay: 1.25 }}
-          className="mt-4 rounded-xl border border-gold/30 bg-parchment-deep/40 px-4 py-2 text-center"
+          className="mt-4 rounded-xl border border-gold/30 bg-parchment-deep/40 px-4 py-2.5 text-center max-w-sm mx-auto shadow-xs"
         >
-          <p className="text-[0.62rem] tracking-[0.2em] text-gold uppercase">{familyElders.title}</p>
-          <p className="text-xs font-medium text-pine mt-0.5">{familyElders.names}</p>
+          <p className="text-[0.62rem] tracking-[0.2em] text-gold uppercase font-semibold">{familyElders.title}</p>
+          <p className="text-xs font-semibold text-pine mt-1">{familyElders.names}</p>
+          <p className="text-xs font-semibold text-pine mt-0.5">{familyElders.parents}</p>
         </motion.div>
       </motion.div>
 

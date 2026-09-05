@@ -1,5 +1,5 @@
 /**
- * Single source of truth for Archie Jain & Lakshya Jain's wedding invitation.
+ * Single source of truth for Lakshya Jain & Archie Jain's wedding invitation.
  */
 
 export interface EventItem {
@@ -19,17 +19,18 @@ export interface DaySchedule {
 
 export const invitation = {
   couple: {
-    bride: "Archie Jain",
-    brideShort: "Archie",
-    brideParents: "D/o Smt. Sunita Jain & Shri Umesh Jain",
     groom: "Lakshya Jain",
     groomShort: "Lakshya",
     groomParents: "S/o Smt. Reena Jain & Shri Sandeep Jain",
-    hashtag: "#ArchieWedsLakshya",
+    bride: "Archie Jain",
+    brideShort: "Archie",
+    brideParents: "D/o Smt. Sunita Jain & Shri Umesh Jain",
+    hashtag: "#LakshyaWedsArchie",
   },
   familyElders: {
     title: "Invited With Love By",
     names: "Shri Ramesh Chandra Jain & Shreemati Saroj Jain",
+    parents: "Shri Sandeep Jain & Smt. Reena Jain",
   },
   invite: {
     headerInvocation: "॥ श्री महावीराय नमः ॥",
@@ -37,13 +38,13 @@ export const invitation = {
     line: "cordially invite you to celebrate the joyous wedding of their children",
   },
   event: {
-    title: "The Wedding Celebrations of Archie & Lakshya",
+    title: "The Wedding Celebrations of Lakshya & Archie",
     /** ISO with timezone offset — India Standard Time */
     startsAt: "2026-11-14T08:00:00+05:30",
     endsAt: "2026-11-15T22:00:00+05:30",
     dateLabel: "14 . 11 . 2026 — 15 . 11 . 2026",
-    dayLabel: "Saturday & Sunday",
-    timeLabel: "Celebrations begin 8:00 AM",
+    dayLabel: "",
+    timeLabel: "",
     dressCode: "Festive Indian Attire",
     note: "Join us in showering blessings upon the couple",
   },
@@ -61,19 +62,16 @@ export const invitation = {
         {
           time: "10:00 AM",
           title: "Myra",
-          note: "Followed with Breakfast",
         },
         {
           time: "12:00 PM",
           title: "Haldi",
           dressCode: "Yellow Attire",
-          note: "Followed with Dinner",
         },
         {
           time: "05:00 PM",
           title: "Mahila Sangeet",
           entryTime: "Bride & Groom Grand Entry at 7:00 PM",
-          note: "Followed with Dinner",
         },
       ],
     },
@@ -85,23 +83,19 @@ export const invitation = {
         {
           time: "10:00 AM",
           title: "Baarat",
-          note: "Breakfast served before Baarat arrival",
         },
         {
-          time: "12:00 PM",
+          time: "11:30 AM",
           title: "Varmala",
-          note: "Followed with Lunch",
         },
         {
           time: "01:30 PM",
           title: "Phere",
-          note: "Followed with High Tea",
         },
         {
           time: "05:00 PM",
           title: "Reception",
           entryTime: "Bride & Groom Grand Entry at 6:30 PM",
-          note: "Followed with Dinner",
         },
       ],
     },
@@ -109,26 +103,26 @@ export const invitation = {
   venue: {
     name: "Wedding Celebrations Venue",
     address: "Tap below to view full venue directions on Google Maps",
-    mapsQuery: "Archie and Lakshya Wedding Venue",
+    mapsQuery: "Lakshya and Archie Wedding Venue",
     url: "https://share.google/r5kyQlp0lJqvumKx6",
     lat: 26.9124,
     lng: 75.7873,
   },
   story: [
     {
-      year: "2024",
+      year: "",
       title: "Two Souls Meet",
       text: "A beautiful beginning filled with laughter, shared values, and mutual respect.",
       image: "couple-1",
     },
     {
-      year: "2025",
+      year: "",
       title: "Bound by Love",
       text: "Growing closer with every shared moment and creating memories to cherish forever.",
       image: "couple-2",
     },
     {
-      year: "2026",
+      year: "",
       title: "Together Forever",
       text: "Stepping into a lifetime of happiness, togetherness, and sacred union.",
       image: "couple-3",
@@ -141,16 +135,16 @@ export const invitation = {
     source: "With the divine blessings of Lord Mahavira & Elders",
   },
   footer: {
-    families: "With love & warm wishes from Jain & Extended Families",
+    families: "With love & warm wishes from Jain Family",
     contacts: [],
   },
   meta: {
-    title: "Archie & Lakshya — Wedding Celebrations",
+    title: "Lakshya & Archie — Wedding Celebrations",
     description:
-      "Archie Jain & Lakshya Jain cordially invite you to celebrate their wedding on 14–15 November 2026.",
+      "Lakshya Jain & Archie Jain cordially invite you to celebrate their wedding on 14–15 November 2026.",
     url: "https://archie-weds-lakshya.invitingyou.top/",
     image: "https://archie-weds-lakshya.invitingyou.top/og-image.jpg",
-    siteName: "Archie & Lakshya Wedding",
+    siteName: "Lakshya & Archie Wedding",
   },
 } as const;
 
