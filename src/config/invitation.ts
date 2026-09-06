@@ -21,16 +21,17 @@ export const invitation = {
   couple: {
     groom: "Lakshya Jain",
     groomShort: "Lakshya",
-    groomParents: "S/o Smt. Reena Jain & Shri Sandeep Jain",
+    groomParents: "S/o Shri Sandeep Jain & Smt. Reena Jain",
     bride: "Archie Jain",
     brideShort: "Archie",
-    brideParents: "D/o Smt. Sunita Jain & Shri Umesh Jain",
+    brideParents: "D/o Shri Umesh Jain & Smt. Sunita Jain",
     hashtag: "#LakshyaWedsArchie",
   },
   familyElders: {
     title: "Invited With Love By",
     names: "Shri Ramesh Chandra Jain & Shreemati Saroj Jain",
     parents: "Shri Sandeep Jain & Smt. Reena Jain",
+    others: "Dr. Priyul Jain",
   },
   invite: {
     headerInvocation: "॥ श्री महावीराय नमः ॥",

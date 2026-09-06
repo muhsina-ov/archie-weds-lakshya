@@ -35,6 +35,9 @@ export function SiteFooter() {
             <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase font-bold">{familyElders.title}</p>
             <p className="text-xs font-semibold text-pine mt-1.5">{familyElders.names}</p>
             <p className="text-xs font-semibold text-pine mt-1">{familyElders.parents}</p>
+            {"others" in familyElders && (familyElders as Record<string, string>).others && (
+              <p className="text-xs font-semibold text-pine mt-1">{(familyElders as Record<string, string>).others}</p>
+            )}
           </div>
         </div>
 

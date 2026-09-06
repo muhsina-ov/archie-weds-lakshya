@@ -122,6 +122,9 @@ export function Hero() {
           <p className="text-[0.62rem] tracking-[0.2em] text-gold uppercase font-semibold">{familyElders.title}</p>
           <p className="text-xs font-semibold text-pine mt-1">{familyElders.names}</p>
           <p className="text-xs font-semibold text-pine mt-0.5">{familyElders.parents}</p>
+          {"others" in familyElders && (familyElders as Record<string, string>).others && (
+            <p className="text-xs font-semibold text-pine mt-0.5">{(familyElders as Record<string, string>).others}</p>
+          )}
         </motion.div>
       </motion.div>
 
