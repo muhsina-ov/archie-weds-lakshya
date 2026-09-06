@@ -8,6 +8,7 @@ export interface EventItem {
   note?: string;
   dressCode?: string;
   entryTime?: string;
+  icon?: "food" | "sparkles" | "none";
 }
 
 export interface DaySchedule {
@@ -31,7 +32,7 @@ export const invitation = {
     title: "Invited With Love By",
     names: "Shri Ramesh Chandra Jain & Shreemati Saroj Jain",
     parents: "Shri Sandeep Jain & Smt. Reena Jain",
-    others: "Dr. Priyul Jain",
+    others: "Dr. Paryul Jain",
   },
   invite: {
     headerInvocation: "॥ श्री महावीराय नमः ॥",
@@ -58,7 +59,7 @@ export const invitation = {
         {
           time: "08:00 AM",
           title: "Dev Darshan",
-          note: "A auspicious beginning seeking divine blessings",
+          note: "An auspicious beginning seeking divine blessings",
         },
         {
           time: "10:00 AM",

@@ -69,7 +69,11 @@ export function Details() {
 
                           {ev.note && (
                             <p className="mt-1 text-xs text-ink/75 flex items-center gap-1">
-                              <Utensils className="size-3 text-gold/80 inline shrink-0" />
+                              {ev.icon === "food" ? (
+                                <Utensils className="size-3 text-gold/80 inline shrink-0" />
+                              ) : ev.icon === "sparkles" ? (
+                                <Sparkles className="size-3 text-gold/80 inline shrink-0" />
+                              ) : null}
                               {ev.note}
                             </p>
                           )}
